@@ -1,6 +1,6 @@
 package model;
 
-public class Teacher extends SchoolMember{
+public class Teacher{
     private Integer teacherId;
     private String teacherName;
     private String gender;
@@ -66,5 +66,17 @@ public class Teacher extends SchoolMember{
 
     public void setSubject(String subject) {
         this.subject = subject;
+    }
+
+    @Override
+    public String toString() {
+        return "Teacher{" +
+                "teacherId=" + teacherId +
+                ", teacherName='" + teacherName + '\'' +
+                ", gender='" + gender + '\'' +
+                ", email='" + email + '\'' +
+                ", phoneNumber='" + phoneNumber + '\'' +
+                ", subject='" + subject + '\'' +
+                '}';
     }
 }

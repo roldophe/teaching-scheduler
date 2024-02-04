@@ -1,16 +1,31 @@
 package model;
-
-public class Room extends SchoolMember{
+public class Room{
     private Integer roomNumber;
     private String roomName;
-    private Integer numberStudent;
+    private Integer capacity;
     private String building;
-    public Room(){}
-    public Room(Integer roomNumber, String roomName, Integer numberStudent, String building) {
+    private String roomType;
+
+    public Room() {
+    }
+
+    public Room(Integer roomNumber, String roomName, Integer capacity, String building, String roomType) {
         this.roomNumber = roomNumber;
         this.roomName = roomName;
-        this.numberStudent = numberStudent;
+        this.capacity = capacity;
         this.building = building;
+        this.roomType = roomType;
+    }
+
+    @Override
+    public String toString() {
+        return "Room{" +
+                "roomNumber=" + roomNumber +
+                ", roomName='" + roomName + '\'' +
+                ", capacity=" + capacity +
+                ", building='" + building + '\'' +
+                ", roomType='" + roomType + '\'' +
+                '}';
     }
 
     public Integer getRoomNumber() {
@@ -29,12 +44,12 @@ public class Room extends SchoolMember{
         this.roomName = roomName;
     }
 
-    public Integer getNumberStudent() {
-        return numberStudent;
+    public Integer getCapacity() {
+        return capacity;
     }
 
-    public void setNumberStudent(Integer numberStudent) {
-        this.numberStudent = numberStudent;
+    public void setCapacity(Integer capacity) {
+        this.capacity = capacity;
     }
 
     public String getBuilding() {
@@ -44,4 +59,14 @@ public class Room extends SchoolMember{
     public void setBuilding(String building) {
         this.building = building;
     }
+
+    public String getRoomType() {
+        return roomType;
+    }
+
+    public void setRoomType(String roomType) {
+        this.roomType = roomType;
+    }
+
+
 }

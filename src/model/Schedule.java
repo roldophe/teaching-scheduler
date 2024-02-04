@@ -1,10 +1,14 @@
 package model;
 
+import utils.TimeSlot;
+
 import java.time.LocalTime;
 
-public class Schedule extends SchoolMember{
+public class Schedule{
     private Integer scheduleId;
-    private LocalTime time;
+    private TimeSlot timeSlot;
+    private LocalTime startTime;
+    private LocalTime endTime;
     private String day;
     private Room room;
     private Teacher teacher;
@@ -12,9 +16,11 @@ public class Schedule extends SchoolMember{
     public Schedule() {
     }
 
-    public Schedule(Integer scheduleId, LocalTime time, String day, Room room, Teacher teacher) {
+    public Schedule(Integer scheduleId, TimeSlot timeSlot, LocalTime startTime, LocalTime endTime, String day, Room room, Teacher teacher) {
         this.scheduleId = scheduleId;
-        this.time = time;
+        this.timeSlot = timeSlot;
+        this.startTime = startTime;
+        this.endTime = endTime;
         this.day = day;
         this.room = room;
         this.teacher = teacher;
@@ -28,13 +34,6 @@ public class Schedule extends SchoolMember{
         this.scheduleId = scheduleId;
     }
 
-    public LocalTime getTime() {
-        return time;
-    }
-
-    public void setTime(LocalTime time) {
-        this.time = time;
-    }
 
     public String getDay() {
         return day;
@@ -58,5 +57,41 @@ public class Schedule extends SchoolMember{
 
     public void setTeacher(Teacher teacher) {
         this.teacher = teacher;
+    }
+
+    public LocalTime getStartTime() {
+        return startTime;
+    }
+
+    public void setStartTime(LocalTime startTime) {
+        this.startTime = startTime;
+    }
+
+    public LocalTime getEndTime() {
+        return endTime;
+    }
+
+    public void setEndTime(LocalTime endTime) {
+        this.endTime = endTime;
+    }
+
+    public TimeSlot getTimeSlot() {
+        return timeSlot;
+    }
+
+    public void setTimeSlot(TimeSlot timeSlot) {
+        this.timeSlot = timeSlot;
+    }
+
+    @Override
+    public String toString() {
+        return "Schedule{" +
+                "scheduleId=" + scheduleId +
+                ", startTime=" + startTime +
+                ", endTime=" + endTime +
+                ", day='" + day + '\'' +
+                ", room=" + room +
+                ", teacher=" + teacher +
+                '}';
     }
 }
