@@ -1,5 +1,11 @@
+import menu.ScheduleMenu;
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Hello world!");
+
+        // Create a ScheduleMenu object and display the menu
+        ScheduleMenu menu = new ScheduleMenu();
+        menu.displayMenu();
     }
+
+
 }

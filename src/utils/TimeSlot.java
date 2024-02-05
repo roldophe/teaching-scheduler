@@ -1,2 +1,8 @@
-package utils;public enum TimeSlot {
+package utils;
+
+public enum TimeSlot {
+    MORNING,
+    AFTERNOON,
+    EVENING
 }
+

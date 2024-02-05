@@ -1,25 +1,28 @@
 package service.impl;
 
+import model.Room;
 import service.RoomService;
 
 public class RoomServiceImpl implements RoomService {
+
+
     @Override
     public void create() {
 
     }
 
     @Override
-    public void update() {
+    public void readAll() {
 
     }
 
     @Override
-    public Object read() {
+    public Room readById(Integer id) {
         return null;
     }
 
     @Override
-    public void delete() {
-
+    public Room readByName(String name) {
+        return null;
     }
 }
