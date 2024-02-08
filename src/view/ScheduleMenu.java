@@ -1,9 +1,6 @@
-package menu;
+package view;
 
 import model.Schedule;
-import org.nocrala.tools.texttablefmt.BorderStyle;
-import org.nocrala.tools.texttablefmt.ShownBorders;
-import org.nocrala.tools.texttablefmt.Table;
 import service.ScheduleService;
 import service.impl.ScheduleServiceImpl;
 import utils.TimeSlot;
@@ -16,11 +13,12 @@ public class ScheduleMenu {
     private final ScheduleService scheduleService = new ScheduleServiceImpl();
     //private final ScheduleMenu scheduleMenu = new ScheduleMenu(); // stack overflow
     public void displayMenu() {
-        logo();
         Scanner scanner = new Scanner(System.in);
+        MenuView menuView = new MenuView();
+        menuView.logo();
         boolean exit = false;
         while (!exit) {
-            mainMenu();
+            menuView.mainMenu();
             System.out.print("Enter your choice: ");
             int choice = scanner.nextInt();
             scanner.nextLine(); // Consume newline character
@@ -63,25 +61,4 @@ public class ScheduleMenu {
             }
         }
     }
-
-    public void logo(){
-        System.out.println("★".repeat(40));
-        System.out.println("★".repeat(8)+" ".repeat(3)+"Royal University of Phnom Penh"+" ".repeat(3)+"★".repeat(7));
-        System.out.println("★".repeat(9)+" ".repeat(3)+"Teacher Teaching Scheduler"+" ".repeat(4)+"★".repeat(8));
-        System.out.println("★".repeat(40));
-    }
-
-    public static void mainMenu(){
-        Table table = new Table(1, BorderStyle.UNICODE_BOX_DOUBLE_BORDER_WIDE, ShownBorders.SURROUND);
-        table.setColumnWidth(0,20,25);
-        table.addCell("  >> Main Menu << ");
-        table.addCell("–".repeat(20));
-        table.addCell("  1.Morning");
-        table.addCell("  2.Afternoon");
-        table.addCell("  3.Evening");
-        table.addCell("  4.Read Details");
-        table.addCell("  5.Exit Program");
-        System.out.println(table.render());
-    }
-
 }
