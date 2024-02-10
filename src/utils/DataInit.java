@@ -52,47 +52,46 @@ public class DataInit {
         schedules.add(new Schedule(3,TimeSlot.MORNING, LocalTime.of(7, 30), LocalTime.of(9, 0),"TUESDAY",findRoomByNumber(13),findTeacherById(4)));
         schedules.add(new Schedule(4,TimeSlot.MORNING, LocalTime.of(9, 15), LocalTime.of(10, 45),"TUESDAY",findRoomByNumber(11),findTeacherById(3)));
 
-        schedules.add(new Schedule(5,TimeSlot.MORNING, LocalTime.of(7, 30), LocalTime.of(9, 0),"WEDNESDAY",findRoomByNumber(13),findTeacherById(1)));
-        schedules.add(new Schedule(6,TimeSlot.MORNING, LocalTime.of(9, 15), LocalTime.of(10, 45),"WEDNESDAY",findRoomByNumber(11),findTeacherById(2)));
+        schedules.add(new Schedule(5,TimeSlot.MORNING, LocalTime.of(7, 30), LocalTime.of(9, 0),"WEDNESDAY",findRoomByNumber(13),findTeacherById(5)));
+        schedules.add(new Schedule(6,TimeSlot.MORNING, LocalTime.of(9, 15), LocalTime.of(10, 45),"WEDNESDAY",findRoomByNumber(11),findTeacherById(1)));
 
-        schedules.add(new Schedule(7,TimeSlot.MORNING, LocalTime.of(7, 30), LocalTime.of(9, 0),"THURSDAY",findRoomByNumber(13),findTeacherById(4)));
-        schedules.add(new Schedule(8,TimeSlot.MORNING, LocalTime.of(9, 15), LocalTime.of(10, 45),"THURSDAY",findRoomByNumber(11),findTeacherById(5)));
+        schedules.add(new Schedule(7,TimeSlot.MORNING, LocalTime.of(7, 30), LocalTime.of(9, 0),"THURSDAY",findRoomByNumber(13),findTeacherById(3)));
+        schedules.add(new Schedule(8,TimeSlot.MORNING, LocalTime.of(9, 15), LocalTime.of(10, 45),"THURSDAY",findRoomByNumber(11),findTeacherById(2)));
 
         schedules.add(new Schedule(9,TimeSlot.MORNING, LocalTime.of(7, 30), LocalTime.of(9, 0),"FRIDAY",findRoomByNumber(13),findTeacherById(4)));
         schedules.add(new Schedule(10,TimeSlot.MORNING, LocalTime.of(9, 15), LocalTime.of(10, 45),"FRIDAY",findRoomByNumber(11),findTeacherById(5)));
 
         //AFTERNOON
-        schedules.add(new Schedule(11,TimeSlot.AFTERNOON, LocalTime.of(7, 30), LocalTime.of(9, 0),"MONDAY",findRoomByNumber(13),findTeacherById(7)));
+        schedules.add(new Schedule(11,TimeSlot.AFTERNOON, LocalTime.of(7, 30), LocalTime.of(9, 0),"MONDAY",findRoomByNumber(13),findTeacherById(9)));
         schedules.add(new Schedule(12,TimeSlot.AFTERNOON, LocalTime.of(9, 15), LocalTime.of(10, 45),"MONDAY",findRoomByNumber(11),findTeacherById(6)));
 
         schedules.add(new Schedule(13,TimeSlot.AFTERNOON, LocalTime.of(7, 30), LocalTime.of(9, 0),"TUESDAY",findRoomByNumber(13),findTeacherById(8)));
         schedules.add(new Schedule(14,TimeSlot.AFTERNOON, LocalTime.of(9, 15), LocalTime.of(10, 45),"TUESDAY",findRoomByNumber(11),findTeacherById(7)));
 
-        schedules.add(new Schedule(15,TimeSlot.AFTERNOON, LocalTime.of(7, 30), LocalTime.of(9, 0),"WEDNESDAY",findRoomByNumber(13),findTeacherById(6)));
-        schedules.add(new Schedule(16,TimeSlot.AFTERNOON, LocalTime.of(9, 15), LocalTime.of(10, 45),"WEDNESDAY",findRoomByNumber(11),findTeacherById(9)));
+        schedules.add(new Schedule(15,TimeSlot.AFTERNOON, LocalTime.of(7, 30), LocalTime.of(9, 0),"WEDNESDAY",findRoomByNumber(13),findTeacherById(10)));
+        schedules.add(new Schedule(16,TimeSlot.AFTERNOON, LocalTime.of(9, 15), LocalTime.of(10, 45),"WEDNESDAY",findRoomByNumber(11),findTeacherById(8)));
 
-        schedules.add(new Schedule(17,TimeSlot.AFTERNOON, LocalTime.of(7, 30), LocalTime.of(9, 0),"THURSDAY",findRoomByNumber(13),findTeacherById(10)));
-        schedules.add(new Schedule(18,TimeSlot.AFTERNOON, LocalTime.of(9, 15), LocalTime.of(10, 45),"THURSDAY",findRoomByNumber(11),findTeacherById(9)));
+        schedules.add(new Schedule(17,TimeSlot.AFTERNOON, LocalTime.of(7, 30), LocalTime.of(9, 0),"THURSDAY",findRoomByNumber(13),findTeacherById(9)));
+        schedules.add(new Schedule(18,TimeSlot.AFTERNOON, LocalTime.of(9, 15), LocalTime.of(10, 45),"THURSDAY",findRoomByNumber(11),findTeacherById(6)));
 
-        schedules.add(new Schedule(19,TimeSlot.AFTERNOON, LocalTime.of(7, 30), LocalTime.of(9, 0),"FRIDAY",findRoomByNumber(13),findTeacherById(8)));
-        schedules.add(new Schedule(20,TimeSlot.AFTERNOON, LocalTime.of(9, 15), LocalTime.of(10, 45),"FRIDAY",findRoomByNumber(11),findTeacherById(10
-        )));
+        schedules.add(new Schedule(19,TimeSlot.AFTERNOON, LocalTime.of(7, 30), LocalTime.of(9, 0),"FRIDAY",findRoomByNumber(13),findTeacherById(10)));
+        schedules.add(new Schedule(20,TimeSlot.AFTERNOON, LocalTime.of(9, 15), LocalTime.of(10, 45),"FRIDAY",findRoomByNumber(11),findTeacherById(7)));
 
         //EVENING
         schedules.add(new Schedule(21,TimeSlot.EVENING, LocalTime.of(5, 30), LocalTime.of(7, 0),"MONDAY",findRoomByNumber(13),findTeacherById(1)));
         schedules.add(new Schedule(22,TimeSlot.EVENING, LocalTime.of(7, 15), LocalTime.of(8, 0),"MONDAY",findRoomByNumber(11),findTeacherById(3)));
 
-        schedules.add(new Schedule(23,TimeSlot.EVENING, LocalTime.of(5, 30), LocalTime.of(7, 0),"TUESDAY",findRoomByNumber(13),findTeacherById(2)));
-        schedules.add(new Schedule(24,TimeSlot.EVENING, LocalTime.of(7, 15), LocalTime.of(8, 0),"TUESDAY",findRoomByNumber(11),findTeacherById(3)));
+        schedules.add(new Schedule(23,TimeSlot.EVENING, LocalTime.of(5, 30), LocalTime.of(7, 0),"TUESDAY",findRoomByNumber(13),findTeacherById(10)));
+        schedules.add(new Schedule(24,TimeSlot.EVENING, LocalTime.of(7, 15), LocalTime.of(8, 0),"TUESDAY",findRoomByNumber(11),findTeacherById(9)));
 
-        schedules.add(new Schedule(25,TimeSlot.EVENING, LocalTime.of(5, 30), LocalTime.of(7, 0), "WEDNESDAY",findRoomByNumber(13),findTeacherById(4)));
-        schedules.add(new Schedule(26,TimeSlot.EVENING, LocalTime.of(7, 15), LocalTime.of(8, 0),"WEDNESDAY",findRoomByNumber(11),findTeacherById(9)));
+        schedules.add(new Schedule(25,TimeSlot.EVENING, LocalTime.of(5, 30), LocalTime.of(7, 0),"WEDNESDAY",findRoomByNumber(13),findTeacherById(1)));
+        schedules.add(new Schedule(26,TimeSlot.EVENING, LocalTime.of(7, 15), LocalTime.of(8, 0),"WEDNESDAY",findRoomByNumber(11),findTeacherById(3)));
 
-        schedules.add(new Schedule(27,TimeSlot.EVENING, LocalTime.of(5, 30), LocalTime.of(7, 0), "THURSDAY",findRoomByNumber(13),findTeacherById(1)));
-        schedules.add(new Schedule(28,TimeSlot.EVENING, LocalTime.of(7, 15), LocalTime.of(8, 0),"THURSDAY",findRoomByNumber(11),findTeacherById(4)));
+        schedules.add(new Schedule(27,TimeSlot.EVENING, LocalTime.of(5, 30), LocalTime.of(7, 0), "THURSDAY",findRoomByNumber(13),findTeacherById(10)));
+        schedules.add(new Schedule(28,TimeSlot.EVENING, LocalTime.of(7, 15), LocalTime.of(8, 0),"THURSDAY",findRoomByNumber(11),findTeacherById(2)));
 
-        schedules.add(new Schedule(30,TimeSlot.EVENING, LocalTime.of(5, 30), LocalTime.of(7, 0), "FRIDAY",findRoomByNumber(13),findTeacherById(9)));
-        schedules.add(new Schedule(10,TimeSlot.MORNING, LocalTime.of(7, 15), LocalTime.of(8, 0),"FRIDAY",findRoomByNumber(11),findTeacherById(9)));
+        schedules.add(new Schedule(29,TimeSlot.EVENING, LocalTime.of(5, 30), LocalTime.of(7, 0), "FRIDAY",findRoomByNumber(13),findTeacherById(2)));
+        schedules.add(new Schedule(30,TimeSlot.EVENING, LocalTime.of(7, 15), LocalTime.of(8, 0),"FRIDAY",findRoomByNumber(11),findTeacherById(9)));
 
     }
     // Method to find a room by room number

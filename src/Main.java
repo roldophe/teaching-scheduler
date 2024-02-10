@@ -5,6 +5,7 @@ public class Main {
         // Create a ScheduleMenu object and display the menu
         ScheduleMenu menu = new ScheduleMenu();
         menu.displayMenu();
+
     }
 
 

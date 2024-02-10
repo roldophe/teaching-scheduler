@@ -11,11 +11,11 @@ import java.util.Scanner;
 
 public class ScheduleMenu {
     private final ScheduleService scheduleService = new ScheduleServiceImpl();
-    //private final ScheduleMenu scheduleMenu = new ScheduleMenu(); // stack overflow
     public void displayMenu() {
         Scanner scanner = new Scanner(System.in);
         MenuView menuView = new MenuView();
         menuView.logo();
+//        menuView.scheduleDetailTable(null);
         boolean exit = false;
         while (!exit) {
             menuView.mainMenu();
@@ -25,22 +25,19 @@ public class ScheduleMenu {
             switch (choice) {
                 case 1: {
                     List<Schedule> schedules = scheduleService.readAll(TimeSlot.MORNING);
-                    for (Schedule schedule: schedules)
-                        System.out.println(schedule);
+                    menuView.scheduleTable(schedules);
                 }
                     break;
                 case 2: {
                     List<Schedule> schedules = scheduleService.readAll(TimeSlot.AFTERNOON);
-                    for (Schedule schedule: schedules){
-                        System.out.println(schedule);
-                    }
+                        menuView.scheduleTable(schedules);
+
                 }
                     break;
                 case 3: {
                     List<Schedule> schedules = scheduleService.readAll(TimeSlot.EVENING);
-                    for (Schedule schedule: schedules){
-                        System.out.println(schedule);
-                    }
+//                    schedules.forEach(System.out::println);
+                        menuView.scheduleTable(schedules);
                 }
                     break;
                 case 4: {
@@ -49,8 +46,11 @@ public class ScheduleMenu {
                         System.out.print("Please input day (MONDAY): ");
                         String day = scanner.nextLine();
                         LocalTime timeStart = LocalTime.parse(inputTime);
-                        Schedule schedule = scheduleService.readDetailByTimeStartAndDay(timeStart, day);
-                        System.out.println(schedule);
+                            Schedule schedule = scheduleService.readDetailByTimeStartAndDay(timeStart, day);
+                            if (schedule!=null)
+                                menuView.scheduleDetailTable(schedule);
+                            else
+                                System.out.println("Search Not Found!!");
                 }
                     break;
                 case 5:
@@ -60,5 +60,6 @@ public class ScheduleMenu {
                     System.out.println("Invalid choice. Please try again.");
             }
         }
+
     }
 }

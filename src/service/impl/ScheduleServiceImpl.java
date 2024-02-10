@@ -44,7 +44,6 @@ public class ScheduleServiceImpl implements ScheduleService {
                 return schedule;
             }
         }
-
         return null;
     }
 
