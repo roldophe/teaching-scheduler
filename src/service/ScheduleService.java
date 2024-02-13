@@ -4,10 +4,11 @@ import model.Schedule;
 import utils.TimeSlot;
 
 import java.time.LocalTime;
+import java.util.HashSet;
 import java.util.List;
 
 public interface ScheduleService {
-    void create(Schedule schedule);
+    void create(List<Schedule> schedules);
     void update(Integer id);
     List<Schedule> readAll(TimeSlot timeSlot);
     Schedule readDetailByTimeStartAndDay(LocalTime startTime,String day);
