@@ -13,29 +13,18 @@ public class ScheduleServiceImpl implements ScheduleService {
 
     @Override
     public void create(List<Schedule> schedules) {
-        if (schedules!=null){
+        if (schedules != null)
             this.schedules.addAll(schedules);
-        }
-        else {
+        else
             System.out.println("Something when wrong!!");
-        }
     }
-
-    @Override
-    public void update(Integer id) {
-
-    }
-
     @Override
     public List<Schedule> readAll(TimeSlot timeSlot) {
-//        List<Schedule> schedules = new DataInit().schedules;
         List<Schedule> scheduleList = new ArrayList<>();
             System.out.println("\nSchedules for " + timeSlot + ":");
-            for (Schedule schedule : schedules) {
-                if (schedule.getTimeSlot() == timeSlot) {
+            for (Schedule schedule : schedules)
+                if (schedule.getTimeSlot() == timeSlot)
                     scheduleList.add(schedule);
-                }
-            }
         scheduleList.sort(Comparator.comparingInt((Schedule::getScheduleId)));
         return scheduleList;
     }
@@ -43,13 +32,9 @@ public class ScheduleServiceImpl implements ScheduleService {
     @Override
     public Schedule readDetailByTimeStartAndDay(LocalTime startTime, String day) {
         List<Schedule> schedules = new DataInit().schedules;
-
-        // Filter schedules based on the given start time and day
-        for (Schedule schedule : schedules) {
-            if (schedule.getStartTime().equals(startTime) && schedule.getDay().equalsIgnoreCase(day)) {
+        for (Schedule schedule : schedules)
+            if (schedule.getStartTime().equals(startTime) && schedule.getDay().equalsIgnoreCase(day))
                 return schedule;
-            }
-        }
         return null;
     }
 
@@ -63,5 +48,9 @@ public class ScheduleServiceImpl implements ScheduleService {
 
     }
 
+    @Override
+    public void update(Integer id) {
+
+    }
 
 }

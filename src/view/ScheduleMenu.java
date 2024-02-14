@@ -34,7 +34,6 @@ public class ScheduleMenu {
                 case 2: {
                     List<Schedule> schedules = scheduleService.readAll(TimeSlot.AFTERNOON);
                         menuView.scheduleTable(schedules);
-
                 }
                     break;
                 case 3: {

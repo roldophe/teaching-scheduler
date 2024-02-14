@@ -6,7 +6,6 @@ import model.Teacher;
 
 import java.time.LocalTime;
 import java.util.ArrayList;
-import java.util.HashSet;
 import java.util.List;
 
 public class DataInit {
@@ -94,7 +93,7 @@ public class DataInit {
                 return teacher;
             }
         }
-        return null; // Teacher not found
+        return null; // Teacher not foundu
     }
     // Method to find a room by room name
     public Room findRoomByName(String roomName) {
